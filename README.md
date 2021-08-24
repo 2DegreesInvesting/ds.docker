@@ -6,8 +6,10 @@ A series of meetups about using Docker for data science with R.
 
 ## Syllabus
 
-The goal is to lean how to use Docker images for data science with R,
-with a focus on the [Rocker](https://www.rocker-project.org) project.
+The goal is to lean how to use Docker images for data science with R.
+The focus is not on building your own Docker images but instead on using
+existing images – particularly those from the
+[Rocker](https://www.rocker-project.org) project.
 
 At the end of this series you will be able to do things like these:
 
