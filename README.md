@@ -7,8 +7,19 @@ A series of meetups about using Docker for data science with R.
 ## Syllabus
 
 The goal is to lean how to use Docker images for data science with R,
-including the [Rocker](https://www.rocker-project.org), docker-compose,
-and env files.
+with a focus on the [Rocker](https://www.rocker-project.org) project.
+
+At the end of this series you will be able to do things like these:
+
+-   [ ] Use a Unix terminal, even if you are on Windows.
+-   [ ] Use the latest version of R and R packages, without updating
+    your own system.
+-   [ ] Reproduce a problem you see with an older version of R.
+-   [ ] Reproduce a problem you see with the development version of R.
+-   [ ] Use RStudio from the web browser, even if it’s not installed on
+    your computer.
+-   [ ] Share your computing environment with others so they can
+    reproduce your analysis.
 
 Each item in this syllabus corresponds to a meetup and a GitHub
 [release](https://github.com/2DegreesInvesting/ds.shiny/releases) that
