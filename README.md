@@ -15,12 +15,18 @@ Each item in this syllabus corresponds to a meetup and a GitHub
 preserves a snapshot of this repository exactly as it was shown during
 thee meetup.
 
-## An overview of the Rocker project
+## Getting started with the Rocker project
 
 This meetup introduces the Rocker project. It covers [Getting
-started](https://www.rocker-project.org/), an overview of
-[images](https://www.rocker-project.org/images/) and
+started](https://www.rocker-project.org/) and
 [volumes](https://www.rocker-project.org/use/shared_volumes/).
+
+Objectives:
+
+-   Run R in a docker container.
+-   Run RStudio in a docker container and access it from the web
+    browser.
+-   Share a volume between the host computer and the Docker container.
 
 ## Next
 
