@@ -22,7 +22,7 @@ At the end of this series you will be able to do things like these:
     reproduce your analysis.
 
 Each item in this syllabus corresponds to a meetup and a GitHub
-[release](https://github.com/2DegreesInvesting/ds.shiny/releases) that
+[release](https://github.com/2DegreesInvesting/ds.docker/releases) that
 preserves a snapshot of this repository exactly as it was shown during
 thee meetup.
 
