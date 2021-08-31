@@ -18,7 +18,7 @@ At the end of this series you will be able to do things like these:
     your own system.
 -   [ ] Reproduce a problem you see with an older version of R.
 -   [ ] Reproduce a problem you see with the development version of R.
--   [ ] Use RStudio from the web browser, even if it’s not installed on
+-   [x] Use RStudio from the web browser, even if it’s not installed on
     your computer.
 -   [ ] Share your computing environment with others so they can
     reproduce your analysis.
@@ -51,8 +51,6 @@ secrets.
 
 ## Next
 
--   `docker-compose`.
--   env files.
 -   [Managing
     containers](https://www.rocker-project.org/use/managing_containers/).
 -   [Managing users](https://www.rocker-project.org/use/managing_users/)
