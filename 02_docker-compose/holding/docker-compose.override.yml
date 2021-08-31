@@ -1,0 +1,8 @@
+---
+version: "3.7"
+services:
+  rstudio:
+    env_file:
+      - .env_dev
+    volumes: # --mount
+      - ".:/home/rstudio"

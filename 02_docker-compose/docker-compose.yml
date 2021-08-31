@@ -1,0 +1,11 @@
+---
+version: "3.7"
+services:
+  rstudio:
+    image: "rocker/rstudio:latest" #image name
+    env_file:
+      - .env
+    ports:  # -p
+      - "8787:8787"
+    volumes: # --mount
+      - "./R:/home/rstudio/Rlocal"
