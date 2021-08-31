@@ -1,0 +1,115 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = ""
+)
+```
+
+# Managing images and containers
+
+Run some containers for examples
+
+```bash
+docker run -ti --name container1 rocker/r-base
+docker run --rm -ti --name container2 rocker/r-base bash
+```
+
+## View docker containers
+
+https://docs.docker.com/engine/reference/commandline/ps/
+
+```{bash}
+docker ps --help
+```
+
+View the status of all containers (running and stopped).
+
+```{bash}
+docker ps -a
+```
+
+## Stop a container
+
+```bash
+docker stop container1
+```
+
+## Start a stopped container
+
+```bash
+docker start container1
+```
+
+## Excecute commands on a running container
+
+```bash
+# Excecute a command directly from outside the container
+docker exec container1 Rscript -e "install.packages('fs')"
+# Or execute bash, then any command from inside the container, interactively
+docker exec -ti container1 bash
+```
+
+## Remove all stopped containers (but not any actively running ones)
+
+https://docs.docker.com/engine/root/reference/commandline/rm/
+
+```{bash}
+docker rm --help
+```
+
+```bash
+docker rm -v $(docker ps -a -q)
+```
+
+## View docker images
+
+Reference: https://docs.docker.com/engine/reference/commandline/docker/images
+
+```{bash}
+docker images
+```
+
+View images
+
+```{bash}
+docker images
+```
+
+View images from a specific repository
+
+```{bash}
+docker images rocker/r-ver
+```
+
+Filter images with a reference (repository:tag) pattern
+
+https://docs.docker.com/engine/reference/commandline/images/#filtering
+
+```{bash}
+docker images --filter "reference=rocker/*latest"
+```
+
+Show and untagged images (dangling)
+
+```{bash}
+docker images --filter "dangling=true" -q
+```
+
+Remove and untagged images (dangling)
+
+```bash
+docker images --filter "dangling=true" -q | xargs docker rmi
+
+# Same
+docker rmi $(docker images --filter "dangling=true" -q)
+```
+
+## Resources
+
+https://www.rocker-project.org/use/managing_containers/
+
+https://docs.docker.com/engine/reference/commandline/docker/
