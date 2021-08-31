@@ -41,6 +41,14 @@ Objectives:
     browser.
 -   Share a volume between the host computer and the Docker container.
 
+## `docker-compose` and .env files.
+
+`docker-compose` is a tool used to organize and simplify running Docker
+containers. This sessions will cover basic usage of `docker-compose` to
+specify options, and provide a consistent command for working with
+Docker. We will also cover the use of .env files for storing secure
+secrets.
+
 ## Next
 
 -   `docker-compose`.
