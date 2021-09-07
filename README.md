@@ -49,6 +49,20 @@ specify options, and provide a consistent command for working with
 Docker. We will also cover the use of .env files for storing secure
 secrets.
 
+## Use cases
+
+This meetup covers how to start containers for common use cases like the
+ones listed in the introduction of this [Syllabus](#syllabus). The goal
+is to clarify what we’ve covered so far with concrete examples you’re
+likely to use. This is a good stopping point if you are only interested
+in the usage – not the management – of docker containers.
+
+Objectives:
+
+-   Revisit how to run containers with `docker` and `docker-compose`.
+-   Ask questions.
+-   Hear what’s next so you decide if you want to stop now.
+
 ## Next
 
 -   [Managing
