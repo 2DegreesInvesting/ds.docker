@@ -7,12 +7,14 @@ All of these use cases do the following:
 * Remove the container when you exit it (`--rm`).
 
 * Make your local home directory available in the container at /home
-  (`${HOME}:/home`).
+  (`${HOME}:/home`^1).
 
 * Make /home the working directory inside the container (`--workdir /home`).
 
 * Make you the owner of any file you create or modify from inside the
   container (`--user rstudio`).
+
+^1: On windonws replace `${HOME}:/home` with `"path/to/somewhere:/home"`.
 
 Resources:
 
