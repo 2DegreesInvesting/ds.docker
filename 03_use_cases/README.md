@@ -32,7 +32,7 @@ docker run -ti  --rm -v ${HOME}:/home --workdir /home --user rstudio rocker/vers
 ## Use case 2: Use the latest version of R (`R`)
 
 You may use it to try the latest version of R without changing the
-versoin installed in your computer.
+version installed in your computer.
 
 ```bash
 docker run -ti  --rm -v ${HOME}:/home --workdir /home --user rstudio rocker/verse R
