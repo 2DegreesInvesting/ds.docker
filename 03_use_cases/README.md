@@ -2,14 +2,14 @@
 
 All of these use cases do the following:
 
-* Allow you to interact with the container (`ti`).
+* Allow you to interact with the container (`-ti`).
 
 * Remove the container when you exit it (`--rm`).
 
 * Make your local home directory available in the container at /home
   (`${HOME}:/home`).
 
-* Make /home the working directory (`--workdir /home`).
+* Make /home the working directory inside the container (`--workdir /home`).
 
 * Make you the owner of any file you create or modify from inside the
   container (`--user rstudio`).
@@ -32,7 +32,7 @@ docker run -ti  --rm -v ${HOME}:/home --workdir /home --user rstudio rocker/vers
 ## Use case 2: Use the latest version of R (`R`)
 
 You may use it to try the latest version of R without changing the
-version installed in your computer.
+version installed on your computer.
 
 ```bash
 docker run -ti  --rm -v ${HOME}:/home --workdir /home --user rstudio rocker/verse R
@@ -41,7 +41,7 @@ docker run -ti  --rm -v ${HOME}:/home --workdir /home --user rstudio rocker/vers
 ## Use case 3: Use a specific versoin of R, e.g. 4.0 (`rocker/verse:4.0`)
 
 You may use it to reproduce a bug exposed with R version 4.0, without
-changing the version installed in your computer.
+changing the version installed on your computer.
 
 ```bash
 docker run -ti  --rm -v ${HOME}:/home --workdir /home --user rstudio rocker/verse:4.0 R
@@ -60,8 +60,7 @@ docker run --rm -v ${HOME}:/home -e PASSWORD=yourpassword -p 8787:8787 rocker/ve
 
 `docker` commands can be translated to the `docker-compose` syntax
 and written to a docker-compose.yml file. This allows you to share a
-computing a environment with your colleagues (e.g. ubuntu with R 4.1.1
-and latest R packages) in three steps:
+computing a environment with your colleagues in three steps:
 
 1. Clone the repository containing the docker-compose.yml file.
 2. `cd` into your local copy of that repository.
