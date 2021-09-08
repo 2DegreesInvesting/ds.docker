@@ -12,7 +12,7 @@ All of these use cases do the following:
 * Make /home the working directory inside the container (`--workdir /home`).
 
 * Make you the owner of any file you create or modify from inside the
-  container (`--user rstudio`).
+  container (`--user $(id -u):$(id -g)`).
 
 ^1: On windonws replace `${HOME}:/home` with `"path/to/somewhere:/home"`.
 
@@ -28,7 +28,7 @@ You may use it to access a unix terminal (like in mac and linux)
 from windows.
 
 ```bash
-docker run -ti  --rm -v ${HOME}:/home --workdir /home --user rstudio rocker/verse bash
+docker run -ti  --rm -v ${HOME}:/home --workdir /home --user "$(id -u):$(id -g)" rocker/verse bash
 ```
 
 ## Use case 2: Use the latest version of R (`R`)
@@ -37,7 +37,7 @@ You may use it to try the latest version of R without changing the
 version installed on your computer.
 
 ```bash
-docker run -ti  --rm -v ${HOME}:/home --workdir /home --user rstudio rocker/verse R
+docker run -ti  --rm -v ${HOME}:/home --workdir /home --user "$(id -u):$(id -g)" rocker/verse R
 ```
 
 ## Use case 3: Use a specific versoin of R, e.g. 4.0 (`rocker/verse:4.0`)
@@ -46,7 +46,7 @@ You may use it to reproduce a bug exposed with R version 4.0, without
 changing the version installed on your computer.
 
 ```bash
-docker run -ti  --rm -v ${HOME}:/home --workdir /home --user rstudio rocker/verse:4.0 R
+docker run -ti  --rm -v ${HOME}:/home --workdir /home --user "$(id -u):$(id -g)" rocker/verse:4.0 R
 ```
 
 ## Use case 4: Use RStudio from the web browser at <http://localhost:8787/>
