@@ -13,5 +13,7 @@ Objectives:
 
 Reference
 
-* https://www.rocker-project.org/
-* https://docs.docker.com/engine/reference/commandline/docker/
+* [Rocker](https://www.rocker-project.org/)
+* [Docker CLI reference](https://docs.docker.com/engine/reference/commandline/docker/)
+* [docker ps --filter](https://docs.docker.com/engine/reference/commandline/ps/#filtering)
+* [Error response from daemon: cannot stop container Cannot kill container](https://github.com/2DegreesInvesting/resources/issues/272)
