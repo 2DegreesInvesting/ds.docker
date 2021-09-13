@@ -1,0 +1,2 @@
+docker run -v /home/rstudio -v /usr/local/lib/R --name rlib3.6-volume rocker/verse:3.6 bash
+docker run --rm -ti --volumes-from rlib3.6-volume --user rstudio rocker/verse:3.6 R
