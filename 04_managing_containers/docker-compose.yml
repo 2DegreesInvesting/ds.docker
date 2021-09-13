@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  rstudio:
+    image: rocker/verse:latest
+    container_name: rstudio
+    ports:
+      - 8787:8787
+    environment:
+    - PASSWORD=123
+    - DISSABLE_AUTH=true
+    volumes:
+      - rlib_latest:/home/rstudio
+
+volumes:
+  rlib_latest:
+    external: true
