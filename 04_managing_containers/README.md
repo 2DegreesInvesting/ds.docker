@@ -1,9 +1,5 @@
 # Managing containers
 
-Reference: https://www.rocker-project.org/
-
-## View container status
-
 ```
 docker -ps --help
 ```
@@ -37,3 +33,9 @@ Managing multiple containers at once
 * Remove in batch
 
 Managing with docker-compose
+
+### Reference
+
+* https://www.rocker-project.org/
+* https://docs.docker.com/engine/reference/commandline/docker/
+
