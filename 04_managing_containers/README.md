@@ -6,8 +6,9 @@ Objectives:
 * View running and stopped containers.
 * Stop a container.
 * Start a container.
-* Filter specific containers.
+* Attach a running container.
 * Remove a container.
+* Filter containers by name and status.
 * Stop and remove multiple containers at once.
 * Same with `docker-compose`.
 
