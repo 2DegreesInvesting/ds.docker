@@ -2,15 +2,11 @@
 
 Objectives:
 
-* Run and name persistent containers.
-* View running and stopped containers.
-* Stop a container.
-* Start a container.
-* Attach a running container.
+* Run and name a persistent containers.
+* View the status of a container.
+* Stop, start, and attach a container.
 * Remove a container.
-* Filter containers by name and status.
 * Stop and remove multiple containers at once.
-* Same with `docker-compose`.
 
 Reference
 
