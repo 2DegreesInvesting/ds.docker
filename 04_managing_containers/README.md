@@ -1,41 +1,17 @@
 # Managing containers
 
-```
-docker -ps --help
-```
+Objectives:
 
-Explore an ephemeral container (`--rm`).
+* Run and name persistent containers.
+* View running and stopped containers.
+* Stop a container.
+* Start a container.
+* Filter specific containers.
+* Remove a container.
+* Stop and remove multiple containers at once.
+* Same with `docker-compose`.
 
-```
-docker run  --rm -ti rocker/r-base
-
-docker ps
-docker ps -a
-```
-
-Managing a single persistent container (default).
-
-* run R
-* stop
-
-* create
-* start
-* attach
-* exec
-* stop
-* remove
-
-The `-q` flag.
-
-Managing multiple containers at once
-
-* Stop in batch
-* Remove in batch
-
-Managing with docker-compose
-
-### Reference
+Reference
 
 * https://www.rocker-project.org/
 * https://docs.docker.com/engine/reference/commandline/docker/
-
