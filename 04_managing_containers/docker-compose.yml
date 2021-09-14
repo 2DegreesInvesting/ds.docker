@@ -1,8 +1,7 @@
 version: "3.8"
 services:
-  rstudio_user:
+  rstudio:
     image: rocker/verse:latest
-    container_name: rstudio_user
     ports:
       - 8787:8787
     environment:
@@ -13,10 +12,8 @@ services:
       - ~/.gitconfig:/home/rstudio/.gitconfig
       - ~/.Renviron:/home/rstudio/.Renviron
 
-  root_admin:
+  root:
     image: rocker/verse:latest
-    container_name: rlib
-    container_name: root_admin
     entrypoint: /bin/bash
     tty: true
     stdin_open: true
