@@ -63,10 +63,21 @@ Objectives:
 -   Ask questions.
 -   Hear what’s next so you decide if you want to stop now.
 
+## Managing containers
+
+Objectives:
+
+-   Run and name a persistent containers.
+-   View the status of a container.
+-   Stop, start, and attach a container.
+-   Remove a container.
+-   Stop and remove multiple containers at once.
+
+Reference
+
 ## Next
 
--   [Managing
-    containers](https://www.rocker-project.org/use/managing_containers/).
+-   Managing images
 -   [Managing users](https://www.rocker-project.org/use/managing_users/)
 
 ## Resources
