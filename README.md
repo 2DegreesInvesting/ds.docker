@@ -73,8 +73,6 @@ Objectives:
 -   Remove a container.
 -   Stop and remove multiple containers at once.
 
-Reference
-
 ## Next
 
 -   Managing images
