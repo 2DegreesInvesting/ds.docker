@@ -1,15 +1,28 @@
 version: "3.8"
 services:
-  rstudio:
+  rstudio_user:
     image: rocker/verse:latest
-    container_name: rstudio
+    container_name: rstudio_user
     ports:
       - 8787:8787
     environment:
     - PASSWORD=123
-    - DISSABLE_AUTH=true
     volumes:
-      - rlib_latest:/home/rstudio
+      - rlib_latest:/usr/local/lib/R
+      - ~/.ssh:/home/rstudio/.ssh
+      - ~/.gitconfig:/home/rstudio/.gitconfig
+      - ~/.Renviron:/home/rstudio/.Renviron
+
+  root_admin:
+    image: rocker/verse:latest
+    container_name: rlib
+    container_name: root_admin
+    entrypoint: /bin/bash
+    tty: true
+    stdin_open: true
+    volumes:
+      - rlib_latest:/usr/local/lib/R
 
 volumes:
   rlib_latest:
+    external: true
