@@ -23,14 +23,14 @@ is not on building your own Docker images but instead on using existing images
 
 At the end of this series you will be able to do things like these:
 
-- [ ] Use a Unix terminal, even if you are on Windows.
-- [ ] Use the latest version of R and R packages, without updating your own
+- Use a Unix terminal, even if you are on Windows.
+- Use the latest version of R and R packages, without updating your own
 system.
-- [ ] Reproduce a problem you see with an older version of R.
-- [ ] Reproduce a problem you see with the development version of R.
-- [x] Use RStudio from the web browser, even if it’s not installed on your
+- Reproduce a problem you see with an older version of R.
+- Reproduce a problem you see with the development version of R.
+- Use RStudio from the web browser, even if it’s not installed on your
 computer.
-- [ ] Share your computing environment with others so they can reproduce your
+- Share your computing environment with others so they can reproduce your
 analysis.
 
 Each item in this syllabus corresponds to a meetup and a GitHub
@@ -81,10 +81,69 @@ Objectives:
 * Remove a container.
 * Stop and remove multiple containers at once.
 
-## Next
+## Managing images
 
-* Managing images
-* [Managing users](https://www.rocker-project.org/use/managing_users/)
+Objectives:
+
+* List and filter docker images, e.g. "dangling" images.
+
+```bash
+docker images ubuntu
+```
+* Remove one and multiple images at once.
+
+```bash
+docker rmi ubuntu 14.04
+
+docker images ubuntu -q | xargs docker rmi
+```
+
+* Understand the need of the [versioned
+image-stack](https://www.rocker-project.org/images/) for reproducible research.
+
+* Learn how to use the latest, development, and specific versions of R.
+
+```bash
+docker run --rm -ti rocker/verse:latest bash
+
+docker run --rm -ti rocker/verse:devel bash
+
+docker run --rm -ti rocker/verse:4.0.3 bash
+```
+
+## Using and managing volumes and users
+
+Objectives:
+
+* Create a volume to access your home directory from inside a container.
+
+```bash
+docker run --rm \
+    -v $(pwd):/home/rstudio \
+    --user rstudio \
+    -e PASSWORD=123 \
+    -p 8787:8787 \
+    rocker/verse:4.0.3
+```
+
+* Use `--user rstudio` so you own the files and directories you share with the
+container and modified from it.
+
+```bash
+docker run --rm -ti -v $(pwd):/home/rstudio --user rstudio rocker/verse bash
+```
+
+* Use `-e ROOT=true` so you can use `sudo` inside the container.
+
+```bash
+docker run --rm \
+    -v $(pwd):/home/rstudio \
+    --user rstudio \
+    -e ROOT=true \
+    -e PASSWORD=123 \
+    -p 8787:8787 \
+    rocker/verse:4.0.3
+```
 
 ## Resources
 
@@ -93,3 +152,8 @@ importance](https://github.com/2DegreesInvesting/ds-incubator/issues/74).
 * [Get Docker](https://docs.docker.com/get-docker/).
 * [The Rocker project](https://www.rocker-project.org/).
 * [Reference](https://docs.docker.com/reference/).
+* Rocker's [versioned image-stack](https://www.rocker-project.org/images/) for
+reproducible research.
+* [Filtering images](https://docs.docker.com/engine/reference/commandline/images/#filtering)
+* [Shared volumes](https://www.rocker-project.org/use/shared_volumes/)
+* [Managing users](https://www.rocker-project.org/use/managing_users/)
