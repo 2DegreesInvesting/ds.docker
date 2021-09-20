@@ -91,10 +91,8 @@ Objectives:
 
 -   Create a volume to access your home directory from inside a
     container.
-
 -   Use `--user rstudio` so you own the files and directories you share
     with the container and modified from it.
-
 -   Use `-e ROOT=true` so you can use `sudo` inside the container.
 
 ## Resources
