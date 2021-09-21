@@ -36,7 +36,7 @@ docker run --rm \
     -e PASSWORD=123 \
     -p 8787:8787 \
     -d \
-    rocker/verse:4.0.3
+    rocker/verse
 
 apt-get update
 sudo apt-get update
