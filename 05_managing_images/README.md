@@ -16,8 +16,8 @@ docker rmi ubuntu:14.04
 docker images ubuntu -q | xargs docker rmi
 ```
 
-* [Show untagged images (dangling)](https://docs.docker.com/engine/reference/com
-mandline/images/#filtering).
+* [Show untagged images
+(dangling)](https://docs.docker.com/engine/reference/commandline/images/#filtering).
 
 * The [versioned image-stack](https://www.rocker-project.org/images/) helps reproduce analyses.
 
