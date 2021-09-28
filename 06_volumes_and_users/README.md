@@ -30,12 +30,10 @@ the container.
 
 ```bash
 docker run --rm \
-    -v $(pwd):/home/rstudio \
-    --user rstudio \
     -e ROOT=true \
     -e PASSWORD=123 \
     -p 8787:8787 \
-    -d \
+    -v $(pwd):/home/rstudio \
     rocker/verse
 
 apt-get update
