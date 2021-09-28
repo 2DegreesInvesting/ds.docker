@@ -85,7 +85,7 @@ Objectives:
 -   Learn how to use the latest, development, and specific versions
     of R.
 
-## Using and managing volumes and users
+## Using volumes and managing users
 
 Objectives:
 
