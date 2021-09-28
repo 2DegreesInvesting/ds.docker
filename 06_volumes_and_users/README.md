@@ -1,4 +1,4 @@
-## Using and managing volumes and users
+## Using volumes and managing users
 
 ### `--volume /path/in/host:/path/in/container`
 
